@@ -16,7 +16,7 @@ public class FileStore implements BlobStore {
 
 
     @Override
-    public void put(Blob blob) throws IOException {
+    public void put(org.superbiz.moviefun.blobstore.Blob blob) throws IOException {
         File targetFile = new File(blob.name);
 
         targetFile.delete();
@@ -37,10 +37,10 @@ public class FileStore implements BlobStore {
             return Optional.empty();
         }
 
-        return Optional.of(new Blob(
-            name,
-            new FileInputStream(file),
-            tika.detect(file)
+        return Optional.<org.superbiz.moviefun.blobstore.Blob>of(new Blob(
+                name,
+                new FileInputStream(file),
+                tika.detect(file)
         ));
     }
 }
