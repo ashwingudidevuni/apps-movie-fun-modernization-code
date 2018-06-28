@@ -1,0 +1,500 @@
+  876  git checkout background-jobs-rabbit-start
+  877  cf start moviefun
+  878  mvn spring-boot:run
+  879  export rabbitmq.queue=my-rabbit-queue
+  880  mvn clean package -DskipTests -Dmaven.test.skip=true
+  881  cf push moviefun -p target/moviefun.war --random-route
+  882  mvn clean package -DskipTests -Dmaven.test.skip=true
+  883  cf push moviefun -p target/moviefun.war --random-route
+  884  git add *
+  885  git commit
+  886  git checkout -b ash-background-jobs-rabbit-sol
+  887  git push --set-upstream origin ash-background-jobs-rabbit-sol
+  888  pwd
+  889  cd ..
+  890  ls
+  891  pwd
+  892  git clone https://github.com/ashwingudidevuni/apps-platform-acceleration-removing-instance-specific-state-code.git
+  893  ls
+  894  ls
+  895  cd apps-platform-acceleration-removing-instance-specific-state-code/
+  896  ls
+  897  mvn -Dmaven.tomcat.port=8080 -DinstanceNumber=0 tomcat7:run-war
+  898  mvn -Dmaven.tomcat.port=8080 -DinstanceNumber=0 tomcat7:run-war
+  899  pwd
+  900  cf push remove-session-state -p target/remove-session-state-lab.war -i 2 --random-route --no-start
+  901  cf start remove-session-state
+  902  ls
+  903  git add *
+  904  git commit
+  905  git checkout -b ash-removing-instance-specific-state-sol
+  906  git push --set-upstream origin ash-removing-instance-specific-state-sol
+  907  cd ..
+  908  ls
+  909  git clone https://github.com/platform-acceleration-lab/apps-platform-acceleration-struts-code.git
+  910  ls
+  911  cd apps-platform-acceleration-struts-code/
+  912  ls
+  913  mvn spring-boot:run
+  914  mvn spring-boot:run
+  915  mvn clean package
+  916  cf push struts -p target/struts.war --random-route --no-start
+  917* git p
+  918  git commit
+  919  git
+  920  git status
+  921  git push
+  922  git checkout -b apps-platform-acceleration-struts-sol
+  923  git push --set-upstream origin ash-platform-acceleration-struts-sol
+  924  ls
+  925  git init
+  926  git push
+  927  git push --set-upstream origin ash-platform-acceleration-struts-sol
+  928  ls
+  929  git status
+  930  git push --set-upstream origin ash-platform-acceleration-struts-sol
+  931  git init -help
+  932  ls
+  933  cd ..
+  934  ren
+  935  cd ..
+  936  ls
+  937  cd workspace/
+  938  ls
+  939  git clone https://github.com/ashwingudidevuni/apps-platform-acceleration-struts-code.git
+  940  ls
+  941  cd apps-platform-acceleration-struts-code
+  942  ls
+  943  mvn spring-boot:run
+  944  cp ../apps-platform-acceleration-struts-code-x/* .
+  945  cp
+  946  cp -R ../apps-platform-acceleration-struts-code-x/* . 
+  947  mvn spring-boot:run
+  948  git add *
+  949  git commit
+  950  git push
+  951  cd ~/workspace/
+  952  ls
+  953  rmdir apps-platform-acceleration-struts-code-x/
+  954  rmdir apps-platform-acceleration-struts-code-x/ -S
+  955  rm apps-platform-acceleration-struts-code-x/ -S
+  956  ls
+  957  git clone https://github.com/ashwingudidevuni/apps-platform-acceleration-ant-code.git
+  958  ls
+  959  git apps-platform-acceleration-ant-code/
+  960  cd apps-platform-acceleration-ant-code/
+  961  ls
+  962  rm -rf .idea
+  963  find . -name *.iml -exec rm {} \;
+  964  ls
+  965  ls
+  966  mvn clean package
+  967  mvn clean install
+  968  ls
+  969  cd repository/
+  970  ls
+  971  cd local/
+  972  ls
+  973  cd org.apache.ivy.example/
+  974  ls
+  975  cd console/
+  976  ls
+  977  cd 1.0/
+  978  ls
+  979  cd jars/
+  980  ls
+  981  mvn clean package
+  982  ls
+  983  cd ~/workspace/
+  984  ls
+  985  cd apps-platform-acceleration-ant-code/
+  986  ls
+  987  mvn clean package
+  988  git add *
+  989  git commit
+  990  git checkout -b ash-ant-conversion-sol
+  991  git push --set-upstream origin ash-ant-conversion-sol
+  992  ls
+  993  cd ..
+  994  git clone https://github.com/platform-acceleration-lab/apps-platform-acceleration-ant-code.git
+  995  git clone https://github.com/platform-acceleration-lab/apps-platform-acceleration-ant-code.git
+  996  git clone https://github.com/ashwingudidevuni/apps-platform-acceleration-ant-code.git
+  997  cd apps-platform-acceleration-ant-code
+  998  ls
+  999  ls
+ 1000  gradle clean build
+ 1001  ls
+ 1002  gradle tasks
+ 1003  gradle clean build
+ 1004  gradle clean build
+ 1005  gradle uploadArchives
+ 1006  task dependenciesGraphDot {
+ 1007      mustRunAfter "clean"
+ 1008      def graphBuildDir = "build/dependenciesGraph"
+ 1009      def dotFile = file "$graphBuildDir/graph.dot"
+ 1010      doLast {
+ 1011          delete graphBuildDir
+ 1012          mkdir graphBuildDir
+ 1013          dotFile << "digraph dependencies {"
+ 1014  gradle clean dependenciesGraph
+ 1015  git checkout -b ash-ant-conversion-gradle-sol
+ 1016  git add *
+ 1017  git commit
+ 1018  gradle clean build
+ 1019  git add *
+ 1020  git commit
+ 1021  git checkout -b ash-ant-conversion-gradle-sol
+ 1022  git push --set-upstream origin ash-ant-conversion-gradle-sol
+ 1023  gradle clean dependenciesGraph
+ 1024  pwd
+ 1025  cd ..
+ 1026  ls
+ 1027  cd apps-platform-acceleration-struts-code
+ 1028  git checkout modernize-mvc-start
+ 1029  git add *
+ 1030  git commit
+ 1031  git push
+ 1032  git push --set-upstream origin modernize-mvc-start-sol
+ 1033  git push --set-upstream origin modernize-mvc-start
+ 1034  cd ~/workspace/
+ 1035  ls
+ 1036  git clone https://github.com/ashwingudidevuni/apps-movie-fun-modernization-code.git
+ 1037  cd apps-movie-fun-modernization-code/
+ 1038  ls
+ 1039  git tag
+ 1040  git show circuit-breaker-solution
+ 1041  pwd
+ 1042  git clean -df
+ 1043  touch .env
+ 1044  ls
+ 1045  vi .env 
+ 1046  vi .env 
+ 1047  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+ 1048  source ~/.bashrc 
+ 1049  vi .env 
+ 1050  vi .env 
+ 1051  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+ 1052  source ~/.bashrc 
+ 1053  env
+ 1054  idea .
+ 1055  ls
+ 1056  ls -a
+ 1057  ls
+ 1058  /usr/local/bin/idea .
+ 1059  ls
+ 1060  vi launch 
+ 1061  idea .
+ 1062  rm launch 
+ 1063  ls
+ 1064  ls -a
+ 1065  git clean -df
+ 1066  ls
+ 1067  ls -a
+ 1068  rm .idea/
+ 1069  rm -s .idea/
+ 1070  rm -df .idea/
+ 1071  rm -dfs .idea/
+ 1072  rmdir -s .idea/
+ 1073  rmd -s .idea/*
+ 1074  rm -s .idea/*
+ 1075  ls -a
+ 1076  rm -R .idea/
+ 1077  ls -a
+ 1078  idea .
+ 1079  ls -a
+ 1080  cd .idea/
+ 1081  ls
+ 1082  vi misc.xml 
+ 1083  vi vcs.xml 
+ 1084  vi workspace.xml 
+ 1085  cd ..
+ 1086  ls
+ 1087  ls -a
+ 1088  rm -R .idea/
+ 1089  ls -a
+ 1090  rm -R .idea/
+ 1091  ls -a
+ 1092  git clean -df
+ 1093  git checkout gradilization-start
+ 1094  git checkout gradlization-start
+ 1095  ls
+ 1096  ls
+ 1097  ls -a
+ 1098  mysql -uroot -e 'DROP DATABASE IF EXISTS movies; CREATE DATABASE movies;'
+ 1099  mysql -uroot movies < ~/workspace/apps-movie-fun-modernization-code/db/schema.ddl
+ 1100  gradle wrapper
+ 1101  ls
+ 1102  ls -a
+ 1103  cd gradle
+ 1104  ls
+ 1105  cd wrapper/
+ 1106  ls
+ 1107  type gradle-wrapper.properties 
+ 1108  vi gradle-wrapper.properties 
+ 1109  cd ..
+ 1110  ls
+ 1111  cd ..
+ 1112  ls
+ 1113  ./gradlew 
+ 1114  ./gradlew  tasks
+ 1115  ls
+ 1116  vi .gitignore 
+ 1117  ls -a
+ 1118  ./gradlew init
+ 1119  ls -a
+ 1120  vi build.gradle 
+ 1121  vi build.gradle 
+ 1122  vi build.gradle 
+ 1123  vi build.gradle 
+ 1124  vi settings.gradle 
+ 1125  ./gradlew bootRun
+ 1126  la
+ 1127  ls
+ 1128  rm pom.xml 
+ 1129  idea .
+ 1130  ./gradlew clean build
+ 1131  ./gradlew clean build
+ 1132  clear
+ 1133  ./gradlew clean build
+ 1134  ./gradlew clean build -xtest
+ 1135  ls
+ 1136  cd build
+ 1137  ls
+ 1138  cd libs/
+ 1139  ls
+ 1140  cd ..
+ 1141  vi pwd
+ 1142  pwd
+ 1143  cd ..
+ 1144  pwd
+ 1145  ls
+ 1146  ls -l
+ 1147  vi .env 
+ 1148  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+ 1149  source ~/.bashrc 
+ 1150  env
+ 1151  ./gradlew clean build
+ 1152  clear
+ 1153  ./gradlew clean build
+ 1154  ./gradlew clean build
+ 1155  ./gradlew clean build
+ 1156  pwd
+ 1157  cf push moviefun  -p build/libs/moviefun-1.1.0-SNAPSHOT.war  --random-route
+ 1158  git push --set-upstream origin ash-gradlization-sol
+ 1159  git push --set-upstream origin gradilization-start
+ 1160  git push --set-upstream origin gradlization-start
+ 1161  git checkout multiple-jars-start
+ 1162  git clean -df
+ 1163  git checkout multiple-jars-start
+ 1164  git commit
+ 1165  git push --set-upstream origin gradlization-start
+ 1166  git add *
+ 1167  git commit
+ 1168  git push --set-upstream origin gradlization-start
+ 1169  git checkout multiple-jars-start
+ 1170  git add *
+ 1171  git commit 
+ 1172* git checkout -b ashgradlization-sol
+ 1173* git 
+ 1174  git add *
+ 1175  git commit
+ 1176  git push --set-upstream origin ashgradlization-sol
+ 1177  git checkout multiple-jars-start
+ 1178  rm .gitignore 
+ 1179  git checkout multiple-jars-start
+ 1180  ls
+ 1181  cd applications/movie-fun-app/
+ 1182  ls
+ 1183  cd ..
+ 1184  cd ..
+ 1185  cd components/movies/
+ 1186  gradle init
+ 1187  cd ..
+ 1188  ls
+ 1189  cd ..
+ 1190  cd applications/
+ 1191  cd movie-fun-app/
+ 1192  ls
+ 1193  gradlew init
+ 1194  gradle init
+ 1195  ./gradlew init
+ 1196  ../../gradlew init
+ 1197  ls
+ 1198  ./gradlew clean build
+ 1199  pwd
+ 1200  cd ..
+ 1201  cd ..
+ 1202  pwd
+ 1203  ./gradlew clean build
+ 1204  ./gradlew clean build -xtest
+ 1205  ./gradlew clean build -xtest
+ 1206  ./gradlew clean build -xtest
+ 1207  ./gradlew clean build -xtest
+ 1208  git checkout multiple-jars-start
+ 1209  git clean -df
+ 1210  git checkout multiple-jars-start
+ 1211  cd ..
+ 1212  pwd
+ 1213  ls
+ 1214  mkdir apps-movie-fun-modernization-code
+ 1215  cd apps-movie-fun-modernization-code
+ 1216  git checkout multiple-jars-start
+ 1217  git init
+ 1218  git checkout multiple-jars-start
+ 1219  cd ..
+ 1220  ls
+ 1221  rm apps-movie-fun-modernization-code
+ 1222  rmdir apps-movie-fun-modernization-code
+ 1223* 
+ 1224  git clone https://github.com/ashwingudidevuni/apps-movie-fun-modernization-code
+ 1225  git checkout multiple-jars-start
+ 1226  cd apps-movie-fun-modernization-code
+ 1227  git checkout multiple-jars-start
+ 1228  ./gradlew clean build -xtest
+ 1229  ./gradlew clean build -xtest
+ 1230  ./gradlew clean build -xtest
+ 1231  ./gradlew bootRun
+ 1232  ./gradlew clean build -xtest
+ 1233  ./gradlew clean build -xtest
+ 1234  ./gradlew bootRun
+ 1235  pwd
+ 1236  idea .
+ 1237  ./gradlew dependenciesGraph
+ 1238  ./gradlew dependenciesGraph
+ 1239  ./gradlew clean build -xtest
+ 1240  ./gradlew clean build -xtest
+ 1241  ./gradlew clean build -xtest
+ 1242  ./gradlew clean build -xtest
+ 1243  ./gradlew clean build -xtest
+ 1244  ls
+ 1245  cd components/
+ 1246  ls
+ 1247  cd movies/
+ 1248  ls
+ 1249  ./gradlew clean build -xtest[B
+ 1250  ../../gradlew clean build -xtest[B
+ 1251  ../../gradlew clean build -xtest
+ 1252  ../../gradlew clean build -xtest
+ 1253  ../../gradlew clean build -xtest
+ 1254  ../../gradlew clean build -xtest
+ 1255  cd ..
+ 1256  ls
+ 1257  cd ..
+ 1258  ls
+ 1259  ./gradlew clean build -xtest
+ 1260  ./gradlew clean build -xtest
+ 1261  ./gradlew clean build -xtest
+ 1262  ./gradlew dependenciesGraph
+ 1263  ./gradlew bootRun
+ 1264  pwd
+ 1265  ./gradlew bootRun
+ 1266  cf push movie-fun-app -p applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war --no-start --random-route
+ 1267  cf start movie-fun-app
+ 1268  vi .gitignore 
+ 1269  git add *
+ 1270  git commit
+ 1271  git push --set-upstream origin multiple-jars-sol
+ 1272  git push --set-upstream origin multiple-jars-start
+ 1273  cf delete-service movies-database
+ 1274  cf delete-service movies-database
+ 1275  ls
+ 1276  pwd
+ 1277  git checkout microservices-start
+ 1278  cf stacks
+ 1279  vi .env 
+ 1280  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+ 1281  source ~/.bashrc 
+ 1282  env
+ 1283  ./gradlew applications:movie-fun-app:bootRun
+ 1284  ./gradlew applications:movie-fun-app:bootRun
+ 1285  ./gradlew applications:movie-fun-app:bootRun
+ 1286  ./gradlew applications:movie-fun-app:bootRun
+ 1287  ./gradlew
+ 1288  ./gradlew applications:movie-fun-app:bootRun
+ 1289  ./gradlew applications:movie-fun-app:bootRun
+ 1290  ./gradlew applications:movie-fun-app:bootRun
+ 1291  ./gradlew applications:movie-fun-app:bootRun
+ 1292  env
+ 1293  vi .env 
+ 1294  vi .env 
+ 1295  echo "source ~/workspace/apps-movie-fun-modernization-code/.env" >> ~/.bashrc
+ 1296  source ~/.bashrc 
+ 1297  env
+ 1298  echo "source ~/workspace/apps-movie-fun-modernization-code
+ 1299  ./gradlew dependenciesGraph
+ 1300  ./gradlew dependenciesGraph
+ 1301  ./gradlew dependenciesGraph
+ 1302  pwd
+ 1303  ls
+ 1304  cf push
+ 1305  cf login
+ 1306  cf push
+ 1307  cf push
+ 1308  cf push
+ 1309  ./gradlew clean build -xtest
+ 1310  ./gradlew clean build -xtest
+ 1311  pwd
+ 1312  ./gradlew clean build -xtest[A
+ 1313  ./gradlew clean build -xtest
+ 1314  ./gradlew clean build -xtest
+ 1315  ./gradlew clean build -xtest
+ 1316  ./gradlew clean build -xtest
+ 1317  cf push
+ 1318  cf push
+ 1319  env
+ 1320  ./gradlew bootRun --parallel
+ 1321  ./gradlew bootRun --parallel
+ 1322  ./gradlew bootRun --parallel
+ 1323  ./gradlew applications:album-service:bootRun
+ 1324  lsof -ti:8081
+ 1325  lsof -ti:8082
+ 1326  ps
+ 1327  ./gradlew applications:album-service:bootRun
+ 1328  ./gradlew applications:album-service:bootRun
+ 1329  cf push
+ 1330  ./gradlew clean build -xtest
+ 1331  cf push
+ 1332  ls
+ 1333  pwd
+ 1334  git checkout migrations-start
+ 1335  git checkout migrations-start
+ 1336  ./gradlew flywayMigrate
+ 1337  mysql -uroot albums -e"DESCRIBE album"
+ 1338  mysql -uroot albums -e"DESCRIBE album_scheduler_task"
+ 1339  ./gradlew flywayMigrate
+ 1340  ./gradlew flywayMigrate
+ 1341  mysql -uroot moves -e"DESCRIBE movie"
+ 1342  mysql -uroot movies -e"DESCRIBE movie"
+ 1343  cf env album-service
+ 1344  cf ssh -N -L 63306:cf_b5d65807_8ce9_4471_880e_b0d7c1d47b6c:3306 album-service
+ 1345  ssh -h
+ 1346  cf ssh -N -L 63306:cf_b5d65807_8ce9_4471_880e_b0d7c1d47b6c:3306 album-service
+ 1347  mysql -uVTfdzPPMSpJ03t2X -h127.0.0.1 -P63306 -pO3dDzzgBsH5iwwH9 -e"SHOW DATABASES;"
+ 1348  mysql -uVTfdzPPMSpJ03t2X -hcf_b5d65807_8ce9_4471_880e_b0d7c1d47b6c -P63306 -pO3dDzzgBsH5iwwH9 -e"SHOW DATABASES;"
+ 1349  mysql -uVTfdzPPMSpJ03t2X -h10.0.16.64 -P63306 -pO3dDzzgBsH5iwwH9 -e"SHOW DATABASES;"
+ 1350  mysql -uVTfdzPPMSpJ03t2X -h10.0.16.64 -P63306  -e"SHOW DATABASES;"
+ 1351  mysql -uVTfdzPPMSpJ03t2X -h10.0.16.64 -P63306 -pO3dDzzgBsH5iwwH9 -e"SHOW DATABASES;"
+ 1352  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+ 1353  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+ 1354  mysql -uVTfdzPPMSpJ03t2X -h10.0.16.64 -P63306 -pO3dDzzgBsH5iwwH9 -e"SHOW DATABASES;"
+ 1355  mysql -uVTfdzPPMSpJ03t2X -h10.0.16.64 -P63306 -pO3dDzzgBsH5iwwH9 -e"SHOW DATABASES;"
+ 1356  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+ 1357  ./gradlew cfMigrate
+ 1358  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+ 1359  ./gradlew cfMigrate
+ 1360  ./gradlew cfMigrate
+ 1361  ./gradlew cfMigrate
+ 1362  ./gradlew cfMigrate
+ 1363  ./gradlew cfMigrate
+ 1364  ./gradlew cfMigrate
+ 1365  ./gradlew cfMigrate
+ 1366  CF_MIGRATE=true ./gradlew cfMigrate
+ 1367  CF_MIGRATE=true ./gradlew cfMigrate
+ 1368  CF_MIGRATE=true ./gradlew cfMigrate
+ 1369  cf ssh -N -L 63306:10.0.16.64:3306 album-service
+ 1370  git add *
+ 1371  git commit
+ 1372  git checkout -b migrations-sol
+ 1373  git push --upstream origin migrations-sol
+ 1374  git push -u origin migrations-sol
+ 1375  history > commands627.txt
