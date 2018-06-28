@@ -7,6 +7,8 @@ services:
 applications:
 - name: album-service
   path: applications/album-service/build/libs/album-service-1.1.0-SNAPSHOT.jar
+  routes:
+
   services:
   - album-database
   - moviefun-s3
@@ -23,6 +25,7 @@ applications:
   services:
   - movie-fun-config
   - moviefun-s3
+  - movie-fun-circuit-breaker
   env:
-    ALBUMS_URL: http://album-service.cfapps-02.haas-66.pez.pivotal.io/albums
-    MOVIES_URL: http://movie-service.cfapps-02.haas-66.pez.pivotal.io/movies
+    ALBUMS_URL: http://album-service-ag.apps.cumuluslabs.io/albums
+    MOVIES_URL: http://movie-service-ag.apps.cumuluslabs.io/movies
